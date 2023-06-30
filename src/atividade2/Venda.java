@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-package atividade2;
-
-/**
- *
- * @author Wendell Marcos
- */
-public class Venda {
-    
-}
-=======
 package atividade2;
 
 import java.util.Scanner;
@@ -23,45 +11,41 @@ public class Venda {
     /*private String nomeCliente;*/
     private String formaDePagamento;
 
-    private Cliente cliente = new Cliente();
-    private PacoteDeViagem pacoteDeViagem = new PacoteDeViagem();
+    private Cliente cliente;
+    private PacoteDeViagem pacoteDeViagem;
 
     public void cadastrarVenda( ) {
         Scanner entrada = new Scanner(System.in);
         Venda venda = new Venda();
         
-        PacoteDeViagem pacoteDeViagem = new PacoteDeViagem();
         
-        cliente.cadastrarCliente();
-        pacoteDeViagem.calcularValorDeLucro();
-                
         System.out.println("Qual a forma de pagamento? ");
-        venda.getFormaDePagamento() = entrada.nextLine();
-        entrada.close();
+        if (entrada.hasNextLine()) {
+        formaDePagamento = entrada.nextLine();
+    }
+       // formaDePagamento = entrada.nextLine();
+        venda.setFormaDePagamento(formaDePagamento);
+      
         
-        System.out.println(cliente + venda + pacoteDeViagem);
+        System.out.println(cliente + venda.getFormaDePagamento());
         
         
 
     }
 
-    public float converterMoeda() {
-        Scanner entrada = new Scanner(System.in);
-        float reaisConvertido;
+    public void converterMoeda( ) {
+        Scanner in = new Scanner(System.in);
         float cotacaoDolar;
-                
-        System.out.println("Olá, qual o valor para converter em reais? ;");
-        pacoteDeViagem.valorDoPacote() = entrada.nextFloat();
-        entrada.nextLine();
+      
+        System.out.println("Olá qual a cotação atual do dolar ? ");
+        cotacaoDolar = in.nextFloat();
+        float TotalDolar = pacoteDeViagem.valorDoPacote();
+        float TotalReal = TotalDolar * cotacaoDolar; 
         
-        System.out.println("Qual cotação atual do Dolar? ;");
-        cotacaoDolar = entrada.nextFloat();
-        entrada.nextLine();
-        
-        reaisConvertido = cotacaoDolar * pacoteDeViagem.valorDoPacote();
-        entrada.close();
-        return System.out.println("Valor convertido :" + reaisConvertido);
-
+            
+        System.out.println("Valor total do pacote em dólar: " + TotalDolar);
+        System.out.println("Valor total do pacote em reais: " + TotalReal);
+       
     }
 
     public void totalValorPacote() {
@@ -94,4 +78,3 @@ public class Venda {
     }
 
 }
->>>>>>> 4cde717 (Atualizando classes, criando lógica, adicionando estrutura de controle)

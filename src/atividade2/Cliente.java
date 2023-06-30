@@ -42,7 +42,7 @@ public class Cliente {
             System.out.println("Segue abaixo dados do cliente: \n" + cliente);
             System.out.println("************************************************************ \n" );
             
-            in.close();
+            
           
     }
     
@@ -50,7 +50,7 @@ public class Cliente {
         
         Cliente cliente = new Cliente( nome, telefone, endereco);
         System.out.println("************************************************************" );
-        System.out.println("Dados do cliente: " + cliente);
+        System.out.println("Dados do cliente: " + cliente.getNome() +"/n" + cliente.getTelefone()  +"/n"+ cliente.getEndereco());
         System.out.println("************************************************************" );
         
       

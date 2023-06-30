@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package atividade2;
-
-/**
- *
- * @author Wendell Marcos
- */
-public class Atividade2 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
-=======
 
 package atividade2;
 
@@ -52,8 +30,8 @@ public class Atividade2 {
         cliente.cadastrarCliente();
         System.out.println("************************************************************ \n" );
         
-        venda.cadastrarVenda();
-        System.out.println("************************************************************ \n" );
+       // venda.cadastrarVenda();
+        //System.out.println("************************************************************ \n" );
         pacoteDeViagem.calcularTotalHospedagem();
         System.out.println("************************************************************ \n" );
         pacoteDeViagem.calcularValorDeLucro();
@@ -69,4 +47,3 @@ public class Atividade2 {
     }
     
 }
->>>>>>> 4cde717 (Atualizando classes, criando lógica, adicionando estrutura de controle)
