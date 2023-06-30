@@ -33,7 +33,7 @@ public class PacoteDeViagem {
         if (resposta.equalsIgnoreCase("SIM") || resposta.equalsIgnoreCase("S")) {
             System.out.println("Qual o valor que gostaria de adicionar? ");
             taxasAdicionais = in.nextFloat();
-            valorDoPacote = + taxasAdicionais;
+            valorDoPacote = +taxasAdicionais;
         }
 
         System.out.print("Margem de Lucro (%): ");
@@ -57,8 +57,13 @@ public class PacoteDeViagem {
         Scanner entrada = new Scanner(System.in);
         int quantidadeDeDias;
         float valorTotal;
-
-        hospedagem.setValorDeDiaria(300f);
+        float diariaHospedagem;
+        
+        System.out.println("Qual o valor diária da hospedagem ?");
+        diariaHospedagem = entrada.nextFloat();
+        
+        
+        hospedagem.setValorDeDiaria(diariaHospedagem);
 
         System.out.println("Digite a quantidade de dias: ");
         quantidadeDeDias = entrada.nextInt();
@@ -87,6 +92,24 @@ public class PacoteDeViagem {
         System.out.printf("Valor total é: %.2f, o lucro total é: %.2f\n", valorTotal, lucroTotal);
 
         return lucroTotal;
+    }
+    
+    public void mostrarInformacoes() {
+        Cliente cliente = new Cliente();
+        PacoteDeViagem pacoteDeViagem = new PacoteDeViagem();
+        Venda venda = new Venda();
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("Qual a cotação atual do Dolar? :");
+        float cotacao = in.nextFloat();
+        
+        System.out.println("--------------- Informações da Venda ---------------");
+        System.out.println("Nome do Cliente: " + cliente.getNome());
+        System.out.println("Forma de Pagamento: " + venda.getFormaDePagamento());
+        System.out.println("Destino: " + pacoteDeViagem.getDestino());
+        System.out.println("Quantidade de dias: " + pacoteDeViagem.getQuantidadeDeDias());
+        System.out.println("Valor total do pacote em dólar: " + pacoteDeViagem.valorDoPacote());
+        System.out.println("Valor total do pacote em reais: " + (pacoteDeViagem.valorDoPacote() * cotacao));
     }
 
     public Transporte getTransporte() {

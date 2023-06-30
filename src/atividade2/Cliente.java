@@ -15,7 +15,7 @@ public class Cliente {
     private String telefone;
     private String endereco;
     
-    Scanner entrada = new Scanner(System.in);
+  
     
     
     public void  cadastrarCliente(){
