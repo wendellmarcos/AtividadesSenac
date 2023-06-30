@@ -88,7 +88,6 @@ public class PacoteDeViagem {
         valorTotal = (margemDesejada / 100) * transporte.getValor();
         lucroTotal = valorTotal - transporte.getValor();
 
-        //System.out.printf("Valor total é : %.2f\n" + valorTotal  + " o lucro total  é : %.2f\n" + lucroTotal);
         System.out.printf("Valor total é: %.2f, o lucro total é: %.2f\n", valorTotal, lucroTotal);
 
         return lucroTotal;

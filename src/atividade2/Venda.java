@@ -8,7 +8,6 @@ import java.util.Scanner;
  */
 public class Venda {
 
-    /*private String nomeCliente;*/
     private String formaDePagamento;
 
     private Cliente cliente;

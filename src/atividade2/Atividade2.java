@@ -1,7 +1,5 @@
 package atividade2;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Wendell Marcos
